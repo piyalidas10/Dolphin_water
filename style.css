@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+.scenery{
+	width:700px;
+	height:600px;
+	margin:0 auto;
+	position:relative;
+	background-color: #d9eefd;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d9eefd), to(#FFFFFF));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #d9eefd, #FFFFFF);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #d9eefd, #FFFFFF);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #d9eefd, #FFFFFF);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #d9eefd, #FFFFFF);
+}
+.sky{
+	height:350px;
+	width:100%;
+}
+.sun{
+	width:100px;
+	height:100px;
+	left:140px;
+	position:absolute;
+	bottom:0;
+	z-index:0;
+	background-color:#fce0a0;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+}
+.cloud1{
+	width:200px;
+	fill: white;
+	stroke: #b6e0fd;
+  	stroke-width: 2;
+  	stroke-linejoin: round;
+	z-index:999;
+	position:absolute;
+	left:150px;
+	top:50px;
+}
+.cloud2{
+	width:120px;
+	fill: white;
+	stroke: #b6e0fd;
+  	stroke-width: 2;
+  	stroke-linejoin: round;
+	z-index:999;
+	position:absolute;
+	left:20px;
+	top:20px;
+}
+.cloud3{
+	width:120px;
+	fill: white;
+	stroke: #b6e0fd;
+  	stroke-width: 2;
+  	stroke-linejoin: round;
+	z-index:999;
+	position:absolute;
+	left:380px;
+	top:20px;
+}
+.cloud4{
+	width:120px;
+	fill: white;
+	stroke: #b6e0fd;
+  	stroke-width: 2;
+  	stroke-linejoin: round;
+	z-index:999;
+	position:absolute;
+	left:500px;
+	top:100px;
+}
+.dolphin{
+	width:120px;
+	position:absolute;
+	right:100px;
+	fill:#02b1f0;
+	stroke: #067fc8;
+  	stroke-width: 2;
+  	stroke-linejoin: round;
+	animation: jump 4s infinite -1s, dolphin 4s infinite -1.5s ease-in-out;
+}
+.water{
+	width:100%;
+	float:left;
+	z-index:999;
+	position:relative;
+	height:250px;
+	background-image:url(bg.png);
+	background-position: 0px 0px;
+	animation:  move 4s infinite linear;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 433px top;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 50px;
+	right:100px;
+  }
+  50%{
+	  bottom:300px;
+	  right:300px;
+  }
+  100% {
+    bottom: 50px;
+	right:300px;
+  }
+}
+
+@keyframes dolphin {
+  0% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-70deg);
+  }
+  100% {
+    transform: rotate(-70deg);
+  }
+}
